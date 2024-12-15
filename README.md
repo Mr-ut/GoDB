@@ -48,7 +48,7 @@ package main
 import (
 	"log"
 
-	"github.com/tidwall/buntdb"
+	"github.com/Mr-ut/GoDB"
 )
 
 func main() {
@@ -571,46 +571,5 @@ if err := db.ReadConfig(&config); err != nil{
 if err := db.SetConfig(config); err != nil{
 	log.Fatal(err)
 }
-```
-
-## Performance
-
-How fast is BuntDB?
-
-Here are some example [benchmarks](https://github.com/tidwall/raft-buntdb#raftstore-performance-comparison) when using BuntDB in a Raft Store implementation.
-
-You can also run the standard Go benchmark tool from the project root directory:
-
-```
-go test --bench=.
-```
-
-### BuntDB-Benchmark
-
-There's a [custom utility](https://github.com/tidwall/buntdb-benchmark) that was created specifically for benchmarking BuntDB.
-
-*These are the results from running the benchmarks on a MacBook Pro 15" 2.8 GHz Intel Core i7:*
-
-```
-$ buntdb-benchmark -q
-GET: 4609604.74 operations per second
-SET: 248500.33 operations per second
-ASCEND_100: 2268998.79 operations per second
-ASCEND_200: 1178388.14 operations per second
-ASCEND_400: 679134.20 operations per second
-ASCEND_800: 348445.55 operations per second
-DESCEND_100: 2313821.69 operations per second
-DESCEND_200: 1292738.38 operations per second
-DESCEND_400: 675258.76 operations per second
-DESCEND_800: 337481.67 operations per second
-SPATIAL_SET: 134824.60 operations per second
-SPATIAL_INTERSECTS_100: 939491.47 operations per second
-SPATIAL_INTERSECTS_200: 561590.40 operations per second
-SPATIAL_INTERSECTS_400: 306951.15 operations per second
-SPATIAL_INTERSECTS_800: 159673.91 operations per second
-```
-
-To install this utility:
-
 ```
 
