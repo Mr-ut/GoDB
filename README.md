@@ -28,10 +28,10 @@ Getting Started
 
 ## Installing
 
-To start using BuntDB, install Go and run `go get`:
+To start using GoDB, install Go and run `go get`:
 
 ```sh
-$ go get -u github.com/tidwall/buntdb
+$ go get -u github.com/Mr-ut/GoDB
 ```
 
 This will retrieve the library.
@@ -39,7 +39,7 @@ This will retrieve the library.
 
 ## Opening a database
 
-The primary object in BuntDB is a `DB`. To open or create your
+The primary object in GoDB is a `DB`. To open or create your
 database, use the `buntdb.Open()` function:
 
 ```go
@@ -613,14 +613,4 @@ SPATIAL_INTERSECTS_800: 159673.91 operations per second
 To install this utility:
 
 ```
-go get github.com/tidwall/buntdb-benchmark
-```
 
-
-
-## Contact
-Josh Baker [@tidwall](http://twitter.com/tidwall)
-
-## License
-
-BuntDB source code is available under the MIT [License](/LICENSE).
